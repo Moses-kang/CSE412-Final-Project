@@ -6,4 +6,5 @@ Python 3.9.0 https://docs.python.org/3.10/
 HTML 5 and CSS 3
 Postgres 12 https://www.postgresql.org/docs/12/
 Flask 1.1x and Flask-sqlalchemy https://flask.palletsprojects.com/en/1.1.x/
+
 Psycopg2 https://flask.palletsprojects.com/en/1.1.x/
