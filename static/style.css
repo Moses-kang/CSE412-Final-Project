@@ -1,0 +1,27 @@
+.moses-align-left {
+    text-align: left;
+}
+
+.moses-align-right {
+    text-align: right;
+}
+
+.moses-align-center {
+    text-align: center;
+}
+
+.moses-50px-height {
+    height:75px;
+}
+
+.moses-horizontal-list {
+    display: inline;
+}
+
+.moses-vertical-list {
+    display: block;
+}
+
+.moses-column-gap40{
+    column-gap:40px
+}

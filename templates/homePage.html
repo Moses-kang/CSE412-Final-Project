@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <nav>
+            <div class="container">
+                <div style="background-color:palegreen;height:130px" class="row align-items-center moses-50px-height">
+                    <div class="col moses-align-left">
+                        <h1>Amazon</h1>
+                        <h1 style="color:sienna">Crossing</h1>
+                    </div>
+                    <div class="col moses-align-center">
+                        <ul class="list-group list-group-horizontal">
+                            <li style="background-color:palegreen" class="list-group-item">
+                                <a class="navbar-brand" style="background-color:white" href="/">Home</a>
+                            </li>
+                            <li style="background-color:palegreen" class="list-group-item">
+                                <a class="navbar-brand" style="background-color:white; width:100px" href="/cart">My Cart</a>
+                            </li>
+                            <li style="background-color:palegreen" class="list-group-item">
+                                <a class="navbar-brand" style="background-color:white" href="/villagerRecs">Villager recommendations</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="background-color:moccasin;padding-bottom:100px" class="row align-items-center">
+                    <div style="margin-left:50px">
+                        <form name="furnitureForm" action="/searchResult" method='GET'>
+                            <h4 style="margin-top:100px">Choose a furniture type:</h4>
+                            <select style="margin-top:10px;margin-right:10px" name="furnitureType" id="furnitureType">
+                                <option value="Animal">Animal</option>
+                                <option value="Arch">Arch</option>
+                                <option value="Archway">Archway</option>
+                                <option value="Audio">Audio</option>
+                                <option value="Bathroom Things">Bathroom Things</option>
+                                <option value="Bathtub">Bathtub</option>
+                                <option value="Bed">Bed</option>
+                                <option value="Chair">Chair</option>
+                                <option value="Chest">Chest</option>
+                                <option value="Clock">Clock</option>
+                                <option value="Compass">Compass</option>
+                                <option value="Desk">Desk</option>
+                                <option value="Dresser">Dresser</option>
+                                <option value="Easter">Easter</option>
+                                <option value="Facility Decor">Facility Decor</option>
+                                <option value="Fan">Fan</option>
+                                <option value="Fireplace">Fireplace</option>
+                                <option value="Fish">Fish</option>
+                                <option value="Fish tank">Fish tank</option>
+                                <option value="Folk Craft Decor">Folk Craft Decor</option>
+                                <option value="Garden">Garden</option>
+                                <option value="Heating">Heating</option>
+                                <option value="Home Appliances">Home Appliances</option>
+                                <option value="Hospital">Hospital</option>
+                                <option value="Insect">Insect</option>
+                                <option value="Insect Cage">Insect Cage</option>
+                                <option value="Japanese Style">Japanese Style</option>
+                                <option value="Kitchen">Kitchen</option>
+                                <option value="Kitchen Things">Kitchen Things</option>
+                                <option value="Lamp">Lamp</option>
+                                <option value="Museum">Museum</option>
+                                <option value="Musical Instrument">Musical Instrument</option>
+                                <option value="Office">Office</option>
+                                <option value="Outdoors Decor">Outdoors Decor</option>
+                                <option value="Plants">Plants</option>
+                                <option value="Playground">Playground</option>
+                                <option value="Ranch">Ranch</option>
+                                <option value="School">School</option>
+                                <option value="Screen">Screen</option>
+                                <option value="Seaside">Seaside</option>
+                                <option value="Seasonal Decor">Seasonal Decor</option>
+                                <option value="Sewing Table">Sewing Table</option>
+                                <option value="Shelf">Shelf</option>
+                                <option value="Shop">Shop</option>
+                                <option value="Sofa">Sofa</option>
+                                <option value="Space">Space</option>
+                                <option value="Sports">Sports</option>
+                                <option value="Study">Study</option>
+                                <option value="Supplies">Supplies</option>
+                                <option value="Table">Table</option>
+                                <option value="Toilet">Toilet</option>
+                                <option value="Toy">Toy</option>
+                                <option value="TV">TV</option>
+                                <option value="Vehicle">Vehicle</option>
+                                <option value="Work Bench">Work Bench</option>
+                            </select>
+                            <input name="furnitureButton" style="background-color:white" type="submit" value="Select Furniture" class="btn btn-default">                            
+                        </form>
+
+                        <form name="interactForm" action="/searchResult" method='GET'>
+                            <h4 style="margin-top:50px">Choose an interaction type:</h4>
+                            <select style="margin-top:10px;margin-right:10px" name="interactions" id="interactions">
+                                <option value="Audio">Audio</option>
+                                <option value="Change cosmetic">Change Cosmetic</option>
+                                <option value="DIY/Craft">DIY/Craft</option>
+                                <option value="Lie Down">Lie Down</option>
+                                <option value="Lighting">Lighting</option>
+                                <option value="none">None</option>
+                                <option value="Place things on top">Place Things On Top</option>
+                                <option value="Play">Play</option>
+                                <option value="Play Music">Play Music</option>
+                                <option value="Sit">Sit</option>
+                                <option value="Trash">Trash</option>
+                                <option value="Wardrobe">Wardrobe</option>
+                            </select>
+                            <input name="interactButton" style="background-color:white" type="submit" value="Select Interaction" class="btn btn-default">                            
+                        </form>    
+
+                        <form name="originForm" action="/searchResult" method='GET'>
+                            <h4 style="margin-top:50px">Choose an origin type:</h4>
+                            <select style="margin-top:10px;margin-right:10px" name="originType" id="originType">
+                                <option value="bought">Bought</option>
+                                <option value="DIY">DIY</option>
+                                <option value="found">Found</option>
+                                <option value="special_events">Special Events</option>
+                            </select>
+                            <input name="originButton" style="background-color:white" type="submit" value="Select Origin" class="btn btn-default">                            
+                        </form>    
+                        
+                        <form name="collectForm" action="/searchResult" method='GET'>
+                            <h4 style="margin-top:50px">Choose a collect type:</h4>
+                            <select style="margin-top:10px;margin-right:10px" name="collectType" id="collectType">
+                                <option value="Disguised on shoreline">Disguised on shoreline</option>
+                                <option value="Disguised under trees">Disguised under trees</option>
+                                <option value="Flying">Flying</option>
+                                <option value="Flying near blue/purple/black flowers">Flying near blue/purple/black flowers</option>
+                                <option value="Flying near flowers">Flying near flowers</option>
+                                <option value="Flying near light sources">Flying near light sources</option>
+                                <option value="Flying near trash (boots, tires, cans, used fountain fireworks) or rotten turnips">Flying near trash (boots, tires, cans, used fountain fireworks) or rotten turnips</option>
+                                <option value="Flying near water">Flying near water</option>
+                                <option value="From hitting rocks">From hitting rocks</option>
+                                <option value="On beach rocks">On beach rocks</option>
+                                <option value="On flowers">On flowers</option>
+                                <option value="On hardwood/cedar trees">On hardwood/cedar trees</option>
+                                <option value="On palm trees">On palm trees</option>
+                                <option value="On rivers/ponds">On rivers/ponds</option>
+                                <option value="On rocks/bushes">On rocks/bushes</option>
+                                <option value="On rotten turnips">On rotten turnips</option>
+                                <option value="On the ground">On the ground</option>
+                                <option value="On tree stumps">On tree stumps</option>
+                                <option value="On trees (any kind)">On trees (any kind)</option>
+                                <option value="On villagers">On villagers</option>
+                                <option value="On white flowers">On white flowers</option>
+                                <option value="Pier">Pier</option>
+                                <option value="Pond">Pond</option>
+                                <option value="Pushing snowballs">Pushing snowballs</option>
+                                <option value="River">River</option>
+                                <option value="River (clifftop)">River (clifftop)</option>
+                                <option value="River (mouth)">River (mouth)</option>
+                                <option value="Sea">Sea</option>
+                                <option value="Sea (rainy days)">Sea (rainy days)</option>
+                                <option value="Shaking trees">Shaking trees</option>
+                                <option value="Shaking trees (hardwood or cedar only)">Shaking trees (hardwood or cedar only)</option>
+                                <option value="Underground (dig where noise is loudest)">Underground (dig where noise is loudest)</option>
+                            </select>
+                            <input name="collectionButton" style="background-color:white" type="submit" value="Select Collection" class="btn btn-default">
+                        </form>
+
+                        <form name="flowerForm" action="/searchResult" method='GET'>
+                            <h4 style="margin-top:50px">Choose a flower color:</h4>
+                            <select style="margin-top:10px;margin-right:10px" name="flowerColor" id="flowerColor">
+                                <option value="Black">Black</option>
+                                <option value="Blue">Blue</option>
+                                <option value="Gold">Gold</option>
+                                <option value="Green">Green</option>
+                                <option value="Orange">Orange</option>
+                                <option value="Pink">Pink</option>
+                                <option value="Purple">Purple</option>
+                                <option value="Red">Red</option>
+                                <option value="White">White</option>
+                                <option value="Yellow">Yellow</option>
+                            </select>
+                            <input name="flowerButton" style="background-color:white" type="submit" value="Select Flower" class="btn btn-default">
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </nav>  
+    </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+        table{
+            width:150%
+        }
+        </style>
+</head>
+
+<body>
+    <div class="container ">
+        <div style="background-color:palegreen;height:130px" class="row align-items-center moses-50px-height">
+            <div class="col moses-align-left">
+                <h1>Amazon</h1>
+                <h1 style="color:sienna">Crossing</h1>
+            </div>
+            <div class="col moses-align-center">
+                <ul class="list-group list-group-horizontal">
+                    <li style="background-color:palegreen" class="list-group-item">
+                        <a class="navbar-brand" style="background-color:white" href="/">Home</a>
+                    </li>
+                    <li style="background-color:palegreen" class="list-group-item">
+                        <a class="navbar-brand" style="background-color:white; width:100px" href="/cart">My Cart</a>
+                    </li>
+                    <li style="background-color:palegreen" class="list-group-item">
+                        <a class="navbar-brand" style="background-color:white" href="/villagerRecs">Villager recommendations</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div style="background-color:moccasin;padding-bottom:100px;" class="row align-items-center">
+            <div style="margin-left:50px">
+                <h3 style="margin-top:50px">Here are the list of furnitures based on your selections:</h3>
+
+                <div class = "form-group" style = "color:rgb(0, 0, 0)" id = "resultForm">
+                    {% if types == 0 %}
+                    <table>
+                        <tr>
+                            <th>Item Name</th>
+                            <th>Furniture type</th>
+                            <th>Interaction</th>
+                        </tr>
+                        {% for t in dataset %}
+                        <tr>
+                            <td>{{t[1]}}</td>
+                            <td>{{t[2]}}</td>
+                            <td>{{t[3]}}</td>
+                            <td><img alt="image" src="{{t[4]}}"></td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                    {% endif %}
+
+                    {% if types == 1 %}
+                    <table>
+                        <tr>
+                            <th>Item Name</th>
+                            <th>Furniture type</th>
+                            <th>Collection Type</th>
+                        </tr>
+                        {% for t in dataset %}
+                        <tr>
+                            <td>{{t[0]}}</td>
+                            <td>{{t[1]}}</td>
+                            <td>{{t[2]}}</td>
+                            <td><img alt="image" src="{{t[3]}}"></td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                    {% endif %}
+
+                    {% if types == 2 %}
+                    <table>
+                        <tr>
+                            <th>Item Name</th>
+                            <th>Furniture type</th>
+                            <th>Flower Color</th>
+                        </tr>
+                        {% for t in dataset %}
+                        <tr>
+                            <td>{{t[0]}}</td>
+                            <td>{{t[1]}}</td>
+                            <td>{{t[2]}}</td>
+                            <td><img alt="image" src="{{t[3]}}"></td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                    {% endif %}
+
+                    {% if types == 4 %}
+                    <table>
+                        <tr>
+                            <th>Item Name</th>
+                            <th>Furniture type</th>
+                        </tr>
+                        {% for t in dataset %}
+                        <tr>
+                            <td>{{t[0]}}</td>
+                            <td>{{t[1]}}</td>
+                            <td><img alt="image" src="{{t[2]}}"></td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
