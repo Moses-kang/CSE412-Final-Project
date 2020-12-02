@@ -92,7 +92,6 @@ def searching():
         elif 'collectionButton' in request.values:
             type = 1
             _collect = request.values.get('collectType')
-            print(collect)
             query = "SELECT furniture.name, furniture.furn_type, collectible.collect_type, furniture.image FROM furniture INNER JOIN collectible ON collectible.collect_type = '"+_collect+"' AND furniture.furn_id = collectible.furn_id;"
             print(query)
             cur.execute(query)
